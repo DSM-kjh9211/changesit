@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자리 바꾸기 (4x4)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>자리 바꾸기</h1>
+    <p class="subtitle">4 × 4 교실 자리를 무작위로 섞고, 번호로 확인하세요.</p>
+
+    <section class="controls">
+      <div class="input-group">
+        <label for="namesInput">학생 이름 (한 줄에 한 명, 최대 16명)</label>
+        <textarea id="namesInput" rows="8" placeholder="예시)&#10;김민준&#10;이서연&#10;박도윤&#10;최지우"></textarea>
+      </div>
+      <div class="button-group">
+        <button id="shuffleBtn" class="btn primary">자리 섞기</button>
+        <button id="resetBtn" class="btn">초기화</button>
+        <button id="exportPngBtn" class="btn">PNG로 내보내기</button>
+        <button id="exportCsvBtn" class="btn">CSV로 내보내기</button>
+      </div>
+    </section>
+
+    <section class="board-wrapper">
+      <div class="blackboard">칠 판</div>
+      <div id="seatGrid" class="seat-grid"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
